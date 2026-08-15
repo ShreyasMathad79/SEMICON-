@@ -47,7 +47,6 @@ Additionally, this repository includes **`Drift-Sense`** — an AI-powered Navig
 ├── evaluation_script.py      # Standalone Evaluation Script for KLA H100 Benchmark (Positional & Flag CLI)
 ├── train.py                  # Full Training & Validation Pipeline from scratch
 ├── drift_sense.py            # Drift-Sense Navigation-Error Recovery Engine
-├── generate_presentation.py  # Automated 9-Slide Presentation Generator (VisionForge_KLA_PS01.pptx)
 ├── web_app.py                # Interactive Web Metrology & Restoration Studio (1D Line Profiles & HUD)
 ├── requirements.txt          # Frozen environment dependencies
 ├── README.md                 # Complete solution documentation
@@ -60,17 +59,14 @@ Additionally, this repository includes **`Drift-Sense`** — an AI-powered Navig
 ├── weights/
 │   ├── best_model.pth        # Final Trained Model Checkpoint (1.02 MB)
 │   └── semicon_restoration_model.pth
-├── logs/                     # Training history logs (.json and .csv)
-└── restored_test_outputs/   # Pre-computed 256x256 .npy outputs for all 400 test images
 ```
 
 ---
 
 ## ⚙️ 4. Quick Start & Installation
 
-### Step 1: Clone Repository
+### Step 1: 
 ```bash
-git clone https://github.com/VisionForge/KLA-Semicon-Restoration.git
 cd KLA-Semicon-Restoration
 ```
 
@@ -172,38 +168,5 @@ Open **`http://127.0.0.1:8050`** in your browser to:
 4. Monitor live HUD metrics: PSNR, SSIM, Latency (ms), and Bicubic baseline.
 
 ---
-
-## 📑 10. Automated 9-Slide Presentation Generation
-
-Generate the official 9-slide Hackathon presentation deck (`VisionForge_KLA_PS01.pptx`):
-
-```bash
-python generate_presentation.py
-```
-
-### Slides Covered (Adhering to KLA Idea Submission Template):
-- **Slide 1**: Team Details & Track Information
-- **Slide 2**: Problem Statement Addressed (Semiconductor Physics & Metrology Impact)
-- **Slide 3**: Idea Description (NAFNet SimpleGate + PixelShuffle + Frequency Alignment)
-- **Slide 4**: Proposed Solution (Composite Loss Formulation & Training Pipeline)
-- **Slide 5**: Innovation & Uniqueness (FFT Loss, Dynamic Range Handling, Sub-3.5ms Speed)
-- **Slide 6**: Quantitative & Qualitative Results (PSNR/SSIM gains, visual evidence)
-- **Slide 7**: Technology Stack & Industrial Fab Feasibility
-- **Slide 8**: GitHub Repository & Video Demo Links
-- **Slide 9**: Academic References & Literature Citations
-
----
-
-## 📜 11. Submission Checklist Compliance
-
-- [x] **Component 1 — PPT/PDF Submission**: 9-slide deck generated via `generate_presentation.py` (`VisionForge_KLA_PS01.pptx`).
-- [x] **Component 2 — GitHub Repository**:
-  1. `README.md` (Complete reproduction instructions).
-  2. `evaluation_script.py` (Standalone Python CLI accepting input and output directories, benchmark-ready for H100).
-  3. `train.py` (Fully reproducible training script).
-  4. `weights/best_model.pth` (Trained model weights checkpoint, 1.02 MB).
-  5. `restored_test_outputs/` (Folder containing all 400 restored test `.npy` outputs).
-  6. `requirements.txt` (Clean environment dependencies).
-  7. `drift_sense.py` (Navigation-Error Recovery algorithm for periodic wafers).
 
 
